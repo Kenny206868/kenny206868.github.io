@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Liray Tali | Small Clip, Big Ayos</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement">
+        SMALL CLIP, BIG AYOS ♡ FREE YOUR STYLE WITH LIRAY TALI
+    </div>
+
+    <!-- Navigation -->
+    <header class="header">
+
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation"
+            aria-controls="navigation" aria-expanded="false">
+            ☰
+        </button>
+
+        <a href="#home" class="logo">
+            LIRAY <span>TALI</span>
+            <small>SMALL CLIP, BIG AYOS</small>
+        </a>
+
+        <nav class="navigation" id="navigation">
+            <a href="#home">Home</a>
+            <a href="#shop">Shop All</a>
+            <a href="#shop" data-category="Scrunchies">Scrunchies</a>
+            <a href="#shop" data-category="Claw Clips">Claw Clips</a>
+            <a href="#shop" data-category="Headbands">Headbands</a>
+            <a href="#shop" data-category="Accessories">Accessories</a>
+        </nav>
+
+        <div class="header-actions">
+            <button id="searchToggle" aria-label="Search products">⌕</button>
+
+            <button id="cartToggle">
+                Bag (<span id="cartCount">0</span>)
+            </button>
+        </div>
+
+    </header>
+
+    <main>
+
+        <!-- Homepage Banner -->
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+                <p class="eyebrow">YOUR EVERYDAY HAIR ESSENTIALS</p>
+
+                <h1>
+                    LIRAY TALI.<br>
+                    <em>YOUR EVERYDAY HAIR ESSENTIALS.</em>
+                </h1>
+
+                <p class="hero-description">
+                    Pretty, practical, and affordable hair accessories
+                    made for your everyday moments.
+                </p>
+
+                <a href="#shop" class="button button-dark">
+                    SHOP COLLECTION ↗
+                </a>
+            </div>
+
+            <div class="hero-art">
+                <figure>
+                    <img src="ebc8a977-8a0f-4295-a04a-6349dca69cb0.jpg"
+                        alt="A collection of hair accessories including scrunchies, claw clips, and headbands.">
+                </figure>
+            </div>
+
+        </section>
+
+        <!-- Category Links -->
+        <section class="category-strip">
+
+            <a href="#shop" data-category="All">
+                SHOP ALL ↗
+            </a>
+
+            <a href="#shop" data-category="Scrunchies">
+                SCRUNCHIES ↗
+            </a>
+
+            <a href="#shop" data-category="Claw Clips">
+                CLAW CLIPS ↗
+            </a>
+
+            <a href="#shop" data-category="Accessories">
+                ACCESSORIES ↗
+            </a>
+
+        </section>
+
+        <!-- Shop -->
+        <section class="shop-section" id="shop">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">THE LIRAY TALI COLLECTION</p>
+                    <h2>Find your new favorite.</h2>
+                </div>
+
+                <p>Everyday accessories. Main-character energy.</p>
+            </div>
+
+            <!-- Search -->
+            <div class="search-container" id="searchContainer" hidden>
+                <input type="search" id="searchInput" placeholder="Search for products..." aria-label="Search products">
+
+                <button id="clearSearch">Clear</button>
+            </div>
+
+            <!-- Filters and Sorting -->
+            <div class="shop-tools">
+
+                <div class="filters">
+                    <button class="filter active" data-filter="All">
+                        All Products
+                    </button>
+
+                    <button class="filter" data-filter="Scrunchies">
+                        Scrunchies
+                    </button>
+
+                    <button class="filter" data-filter="Claw Clips">
+                        Claw Clips
+                    </button>
+
+                    <button class="filter" data-filter="Headbands">
+                        Headbands
+                    </button>
+
+                    <button class="filter" data-filter="Accessories">
+                        Accessories
+                    </button>
+                </div>
+
+                <label class="sort-label">
+                    Sort:
+                    <select id="sortSelect">
+                        <option value="featured">Featured</option>
+                        <option value="low">Price: Low to High</option>
+                        <option value="high">Price: High to Low</option>
+                        <option value="name">Name: A to Z</option>
+                    </select>
+                </label>
+
+            </div>
+
+            <!-- Products are inserted here by JavaScript -->
+            <div class="product-grid" id="productGrid"></div>
+
+        </section>
+
+        <!-- Brand Message -->
+        <section class="brand-note">
+
+            <p class="eyebrow">MADE FOR YOUR EVERYDAY AYOS</p>
+
+            <h2>
+                Affordable little things.<br>
+                <em>Big happy energy.</em>
+            </h2>
+
+            <p>
+                From class days to coffee dates, find a little something
+                that feels like you.
+            </p>
+
+            <a href="#shop" class="button button-dark">
+                DISCOVER YOUR STYLE ↗
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <a href="#home" class="logo">
+            LIRAY <span>TALI</span>
+        </a>
+
+        <p>Small Clip, Big Ayos ♡</p>
+
+        <div class="footer-contact">
+            <p>Need help?</p>
+            <a href="tel:09976689894">0997 668 9894</a>
+            <a href="mailto:liraytali@gmail.com">liraytali@gmail.com</a>
+        </div>
+
+        <p>
+            &copy; <span id="currentYear"></span> Liray Tali
+        </p>
+
+    </footer>
+
+    <!-- Product Details Dialog -->
+    <dialog id="productDialog" class="product-dialog">
+
+        <button type="button" class="dialog-close" id="closeProductDialog" aria-label="Close product details">
+            &times;
+        </button>
+
+        <div id="productDetails"></div>
+
+    </dialog>
+
+    <!-- Shopping Cart Dialog -->
+    <dialog id="cartDialog" class="cart-dialog">
+
+        <div class="cart-header">
+            <h2>Your Shopping Bag</h2>
+
+            <button type="button" id="closeCartDialog" class="dialog-close" aria-label="Close shopping bag">
+                &times;
+            </button>
+        </div>
+
+        <div id="cartItems"></div>
+
+        <div class="cart-summary">
+            <span>Subtotal</span>
+            <strong id="cartTotal">₱0.00</strong>
+        </div>
+
+        <p class="cart-note">
+            Delivery costs and item availability will be confirmed when we reply to your order request.
+        </p>
+
+        <button class="button button-dark full-width" id="checkoutButton">
+            CHECKOUT
+        </button>
+
+    </dialog>
+
+    <!-- Checkout flow -->
+    <dialog id="checkoutDialog" class="checkout-dialog">
+        <div class="cart-header">
+            <h2 id="checkoutTitle">Checkout · Review</h2>
+            <button type="button" id="closeCheckoutDialog" class="dialog-close" aria-label="Close checkout">
+                &times;
+            </button>
+        </div>
+
+        <div class="checkout-progress" aria-label="Checkout progress">
+            <span data-checkout-progress="review">1. Review</span>
+            <span data-checkout-progress="customer">2. Customer info</span>
+            <span data-checkout-progress="payment">3. Payment</span>
+        </div>
+
+        <section class="checkout-step" data-checkout-step="review" hidden>
+            <h3>Review your order</h3>
+            <div id="checkoutReview"></div>
+            <div class="cart-summary">
+                <span>Items subtotal</span>
+                <strong id="checkoutTotal">₱0.00</strong>
+            </div>
+            <p class="checkout-notice">Shipping fee and availability are confirmed before your order is accepted.</p>
+            <div class="checkout-actions">
+                <button type="button" class="button button-light" id="backToBag">BACK TO BAG</button>
+                <button type="button" class="button button-dark" data-checkout-next="customer">CONTINUE</button>
+            </div>
+        </section>
+
+        <section class="checkout-step" data-checkout-step="customer" hidden>
+            <h3>Customer information</h3>
+            <form id="customerInfoForm" class="customer-info-form">
+                <label for="customerName">Full name</label>
+                <input id="customerName" name="customerName" type="text" autocomplete="name" required>
+
+                <label for="customerEmail">Email address</label>
+                <input id="customerEmail" name="customerEmail" type="email" autocomplete="email"
+                    placeholder="you@example.com" required>
+
+                <label for="customerPhone">Mobile number</label>
+                <input id="customerPhone" name="customerPhone" type="tel" autocomplete="tel" required>
+
+                <label for="customerAddress">Street address, building, unit</label>
+                <textarea id="customerAddress" name="customerAddress" rows="2" autocomplete="street-address"
+                    required></textarea>
+
+                <label for="customerCity">City / municipality</label>
+                <input id="customerCity" name="customerCity" type="text" autocomplete="address-level2" required>
+
+                <label for="customerProvince">Province</label>
+                <input id="customerProvince" name="customerProvince" type="text" autocomplete="address-level1" required>
+
+                <label for="customerPostalCode">Postal code</label>
+                <input id="customerPostalCode" name="customerPostalCode" type="text" inputmode="numeric"
+                    autocomplete="postal-code" required>
+
+                <label for="deliveryNotes">Delivery instructions <span>(optional)</span></label>
+                <textarea id="deliveryNotes" name="deliveryNotes" rows="2"></textarea>
+
+                <p class="checkout-notice">
+                    Add your delivery details first, then choose a payment method on the next step.
+                </p>
+                <div class="checkout-actions">
+                    <button type="button" class="button button-light" data-checkout-back="review">BACK</button>
+                    <button type="button" class="button button-dark" id="continueToPayment">CONTINUE TO PAYMENT</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="checkout-step" data-checkout-step="payment" hidden>
+            <h3>Choose a payment method</h3>
+            <fieldset class="payment-methods">
+                <legend>Preferred payment method</legend>
+                <label><input type="radio" name="paymentMethod" value="Credit or debit card" checked> Credit or debit
+                    card</label>
+                <label><input type="radio" name="paymentMethod" value="Maya"> Maya</label>
+                <label><input type="radio" name="paymentMethod" value="GCash"> GCash</label>
+                <label><input type="radio" name="paymentMethod" value="Cash on Delivery (COD)"> Cash on Delivery
+                    (COD)</label>
+            </fieldset>
+            <p class="checkout-notice" id="paymentNotice" aria-live="polite">
+                This site does not process card or e-wallet payments. We will confirm payment instructions after
+                confirming your order. Never email your card number or security code.
+            </p>
+            <div class="checkout-actions">
+                <button type="button" class="button button-light" data-checkout-back="customer">BACK</button>
+                <button type="button" class="button button-dark" id="emailOrderRequest">EMAIL ORDER REQUEST</button>
+            </div>
+        </section>
+
+        <section class="checkout-step checkout-confirmation" data-checkout-step="confirmation" hidden>
+            <h3>Thank you, <span id="confirmationName"></span>!</h3>
+            <p>Your email app should open with your order request.</p>
+            <p id="confirmationSummary"></p>
+            <p class="checkout-notice">
+                Review the message and press Send to contact us. Your order is not confirmed until we reply. Your bag
+                will stay saved on this device until then.
+            </p>
+            <button type="button" class="button button-dark full-width" id="finishCheckout">DONE</button>
+        </section>
+    </dialog>
+
+    <!-- Admin Product Editor -->
+    <dialog id="adminDialog" class="admin-dialog">
+
+        <div class="cart-header">
+            <h2>Manage Products</h2>
+
+            <button type="button" class="dialog-close" id="closeAdminDialog" aria-label="Close product editor">
+                &times;
+            </button>
+        </div>
+
+        <p class="admin-notice">
+            Add products or edit their names, prices, images, and available colors.
+            Changes are saved in this browser.
+        </p>
+
+        <form id="productForm">
+
+            <input type="hidden" id="editProductId">
+
+            <label for="adminName">Product Name</label>
+            <input id="adminName" type="text" required>
+
+            <label for="adminPrice">Price (₱)</label>
+            <input id="adminPrice" type="number" min="0" step="0.01" required>
+
+            <label for="adminCategory">Category</label>
+            <select id="adminCategory" required>
+                <option value="Scrunchies">Scrunchies</option>
+                <option value="Claw Clips">Claw Clips</option>
+                <option value="Headbands">Headbands</option>
+                <option value="Accessories">Accessories</option>
+            </select>
+
+            <label for="adminDescription">Description</label>
+            <textarea id="adminDescription" rows="3" required></textarea>
+
+            <label for="adminImage">Product Image URL or Local Image Path</label>
+            <input id="adminImage" type="text" placeholder="images/cloud-scrunchie.jpg">
+
+            <small>
+                Example: images/cloud-scrunchie.jpg
+            </small>
+
+            <label for="adminColors">
+                Available Colors (separate with commas)
+            </label>
+
+            <input id="adminColors" type="text" placeholder="Pink, Cream, Brown" required>
+
+            <div class="admin-buttons">
+                <button class="button button-dark" type="submit">
+                    SAVE PRODUCT
+                </button>
+
+                <button class="button button-light" type="button" id="resetProductForm">
+                    CLEAR FORM
+                </button>
+            </div>
+
+        </form>
+
+        <h3>Existing Products</h3>
+
+        <div id="adminProductList"></div>
+
+    </dialog>
+
+    <!-- Floating Admin Button -->
+    <button id="adminToggle" class="admin-toggle">
+        ⚙ Manage Store
+    </button>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
